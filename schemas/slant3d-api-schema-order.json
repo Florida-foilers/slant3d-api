@@ -1,0 +1,139 @@
+{
+    "$id": "https://www.slant3dapi.com/api/order.schema.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Customer's email"
+        },
+        "phone": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 20,
+            "pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$",
+            "description": "Customer's phone number."
+        },
+        "name": {
+            "type": "string",
+            "description": "Customer's name."
+        },
+        "orderNumber": {
+            "type": "string",
+            "description": "Customer generated identifier for this order."
+        },
+        "filename": {
+            "type": "string",
+            "description": "Customer provided name for the file to print."
+        },
+        "fileURL": {
+            "type": "string",
+            "format": "uri-template",
+            "description": "URL to the STL file that should be printed in this order."
+        },
+        "bill_to_street_1": {
+            "type": "string",
+            "description": "The street number and street name."
+        },
+        "bill_to_street_2": {
+            "type": "string",
+            "description": "Apartment, unit, or subdivision disignation for destination."
+        },
+        "bill_to_street_3": {
+            "type": "string",
+            "description": "Not typically used."
+        },
+        "bill_to_city": {
+            "type": "string",
+            "description": "The US city name."
+        },
+        "bill_to_state": {
+            "type": "string",
+            "description": "The 2-letter US state code abbrevation."
+        },
+        "bill_to_zip": {
+            "type": "string",
+            "description": "ZIP code is a 5-digit number that specifies an individual destination post office or mail delivery area."
+        },
+        "bill_to_country_as_iso": {
+            "type": "string",
+            "default": "US",
+            "description": "Specify the country using the 2-Alpha letter code from ISO 3166-1."
+        },
+        "bill_to_is_US_residential": {
+            "enum": [
+                "true",
+                "false"
+            ],
+            "default": "true",
+            "description": "Is the billing address residential?"
+        },
+        "ship_to_name": {
+            "type": "string",
+            "description": "Name of individual or company that will receive the item(s)."
+        },
+        "ship_to_street_1": {
+            "type": "string",
+            "description": "The street number and street name."
+        },
+        "ship_to_street_2": {
+            "type": "string",
+            "description": "Apartment, unit, or subdivision disignation for destination."
+        },
+        "ship_to_street_3": {
+            "type": "string",
+            "description": "Not typically used."
+        },
+        "ship_to_city": {
+            "type": "string",
+            "description": "The US city name."
+        },
+        "ship_to_state": {
+            "type": "string",
+            "description": "The 2-letter US state code abbrevation."
+        },
+        "ship_to_zip": {
+            "type": "string",
+            "description": "ZIP code is a 5-digit number that specifies an individual destination post office or mail delivery area."
+        },
+        "ship_to_country_as_iso": {
+            "type": "string",
+            "default": "US",
+            "description": "Specify the country using the 2-Alpha letter code from ISO 3166-1."
+        },
+        "ship_to_is_US_residential": {
+            "enum": [
+                "true",
+                "false"
+            ],
+            "default": "true",
+            "description": "Is the given address a United States residential address?"
+        },
+        "order_item_name": {
+            "type": "string",
+            "description": "Customer assigned name to the order."
+        },
+        "order_quantity": {
+            "type": "string",
+            "description": "The total number of times the STL file should be printed."
+        },
+        "order_image_url": {
+            "type": "string",
+            "format": "uri-template",
+            "description": "URL to the image that will be used in shipping the printed item(s)."
+        },
+        "order_sku": {
+            "type": "string",
+            "description": "Customer's Stock Keeping Unit (SKU) that is usually an alphanumberic 8-character code."
+        },
+        "order_item_color": {
+            "enum": [
+                "black",
+                "white",
+                "grey"
+            ],
+            "description": "The part will be printed in this filament color."
+        }
+    }
+}

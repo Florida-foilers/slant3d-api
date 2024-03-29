@@ -1,0 +1,12 @@
+{
+  "$id": "https://www.slant3dapi.com/api/slicer.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A representation of an STL file to slice.",
+  "type": "object",
+  "properties": {
+    "fileUrl": {
+      "type": "string",
+      "description": "URL to a publicly downloadable STL file. URL redirects are not followed."
+    }
+  }
+}
