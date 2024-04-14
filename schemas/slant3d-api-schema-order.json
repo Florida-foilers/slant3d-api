@@ -135,5 +135,25 @@
             ],
             "description": "The part will be printed in this filament color."
         }
-    }
+    },
+    "required": [
+        "email",
+        "phone",
+        "name",
+        "orderNumber",
+        "filename",
+        "fileURL",
+        "bill_to_street_1",
+        "bill_to_city",
+        "bill_to_state",
+        "bill_to_zip",
+        "ship_to_name",
+        "ship_to_street_1",
+        "ship_to_city",
+        "ship_to_state",
+        "ship_to_zip",
+        "ship_to_country_as_iso",
+        "order_quantity",
+        "order_item_color"
+    ]
 }
